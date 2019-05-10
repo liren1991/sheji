@@ -47,7 +47,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         $('.popup_off').on('click', function () {
             $(".popup_wrapper").fadeOut(500);
         })
-    },700000);
+    }, 700000);
 
     /*----------------------------
     2. Mobile Menu Activation
@@ -236,7 +236,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
             }
         }
     })
-    
+
     /*----------------------------------------------------
     8. Electronics Product Activation
     -----------------------------------------------------*/
@@ -246,29 +246,29 @@ NOTE: main.js, All custom script and plugin activation script in this file.
                 .find('.owl-item').removeClass('last')
                 .eq(event.item.index + event.page.size - 1).addClass('last');
         }).owlCarousel({
-            loop: false,
-            nav: true,
-            dots: false,
-            smartSpeed: 1000,
-            navText: ["<i class='lnr lnr-arrow-left'></i>", "<i class='lnr lnr-arrow-right'></i>"],
-            margin: 10,
-            responsive: {
-                0: {
-                    items: 1,
-                    autoplay: true,
-                    smartSpeed: 500
-                },
-                768: {
-                    items: 2
-                },
-                992: {
-                    items: 3
-                },
-                1200: {
-                    items: 3
-                }
+        loop: false,
+        nav: true,
+        dots: false,
+        smartSpeed: 1000,
+        navText: ["<i class='lnr lnr-arrow-left'></i>", "<i class='lnr lnr-arrow-right'></i>"],
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1,
+                autoplay: true,
+                smartSpeed: 500
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            },
+            1200: {
+                items: 3
             }
-        })
+        }
+    })
 
     $('.electronics-pro-active2')
         .on('changed.owl.carousel initialized.owl.carousel', function (event) {
@@ -276,30 +276,30 @@ NOTE: main.js, All custom script and plugin activation script in this file.
                 .find('.owl-item').removeClass('last')
                 .eq(event.item.index + event.page.size - 1).addClass('last');
         }).owlCarousel({
-            loop: false,
-            nav: true,
-            dots: false,
-            smartSpeed: 1000,
-            navText: ["<i class='lnr lnr-arrow-left'></i>", "<i class='lnr lnr-arrow-right'></i>"],
-            margin: 10,
-            responsive: {
-                0: {
-                    items: 1,
-                    autoplay: true,
-                    smartSpeed: 500
-                },
-                768: {
-                    items: 2
-                },
-                992: {
-                    items: 2
-                },
-                1200: {
-                    items: 3
-                }
+        loop: false,
+        nav: true,
+        dots: false,
+        smartSpeed: 1000,
+        navText: ["<i class='lnr lnr-arrow-left'></i>", "<i class='lnr lnr-arrow-right'></i>"],
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1,
+                autoplay: true,
+                smartSpeed: 500
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 2
+            },
+            1200: {
+                items: 3
             }
-        })
-    
+        }
+    })
+
     /*----------------------------------------------------
     9. Best Seller Product Activation
     -----------------------------------------------------*/
@@ -357,7 +357,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
             }
         }
     })
-    
+
     /*----------------------------------------------------
     10. Like Product Activation
     -----------------------------------------------------*/
@@ -448,7 +448,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
             }
         }
     })
-        
+
     /*----------------------------------------------------
     12. New Product Tow For Home-2 Activation
     -----------------------------------------------------*/
@@ -507,7 +507,7 @@ NOTE: main.js, All custom script and plugin activation script in this file.
     $('.thumb-menu a').on('click', function () {
         $('.thumb-menu a').removeClass('active');
     })
-    
+
     /*----------------------------
     14. Countdown Js Activation
     -----------------------------*/
@@ -544,12 +544,12 @@ NOTE: main.js, All custom script and plugin activation script in this file.
             $('.header-sticky').removeClass("sticky");
         }
     });
-    
+
     /*----------------------------
     17. Nice Select Activation
     ------------------------------ */
     $('select').niceSelect();
-    
+
     /*----------------------------
     18. Price Slider Activation
     -----------------------------*/
@@ -557,21 +557,34 @@ NOTE: main.js, All custom script and plugin activation script in this file.
         range: true,
         min: 50,
         max: 1000,
-        values: [50, 100],
-    slide: function( event, ui ) {
-        $( "#amount" ).val( "¥" + ui.values[ 0 ] + " - ¥" + ui.values[ 1 ] );
-      }
+        step: 50,
+        values: [50, 200],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[0] + " - $" + ui.values[1] );
+        }
     });
-    $( "#amount" ).val( "¥" + $( "#slider-range" ).slider( "values", 50 ) +
-      " - ¥" + $( "#slider-range" ).slider( "values", 100 ) );
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
+    // // range: true,
+    //     step: 50,
+    //     min: 50,
+    //     max: 1000,
+    //     // values: [50, 100],
+    //     slide: function (event, ui) {
+    //         // $("#amount").val("¥" + ui.values[0] + " - ¥" + ui.values[1]);
+    //         $( "#amount" ).val( "$" + ui.value );
+    //     }
+    // });
+    // $("#amount").val("¥" + $("#slider-range").slider("values", 50) +
+    //     " - ¥" + $("#slider-range").slider("values", 100));
 
 
     /*--------------------------
          banner colse Popup
     ---------------------------*/
-        $('.popup_off_banner').on('click', function () {
-            $(".popup_banner").fadeOut(500);
-        })
+    $('.popup_off_banner').on('click', function () {
+        $(".popup_banner").fadeOut(500);
+    })
 
 })(jQuery);

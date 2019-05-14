@@ -54,6 +54,11 @@ public class RequestUtil implements Serializable {
         requestUtil.setStatus(succStatus);
         return requestUtil;
     }
+    public static final Object succ(){
+        RequestUtil requestUtil =  new RequestUtil();
+        requestUtil.setStatus(succStatus);
+        return requestUtil;
+    }
 
     public static final Object error(String errorMessage){
         RequestUtil requestUtil = new RequestUtil();

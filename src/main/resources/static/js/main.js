@@ -556,32 +556,18 @@ NOTE: main.js, All custom script and plugin activation script in this file.
     $("#slider-range").slider({
         range: true,
         min: 50,
-        max: 1000,
+        max: 2000,
         step: 50,
         values: [50, 200],
         slide: function( event, ui ) {
-            $( "#amount" ).val( "$" + ui.values[0] + " - $" + ui.values[1] );
+            $( "#amount" ).val( "¥" + ui.values[0] + " - ¥" + ui.values[1] );
         }
     });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-
-    // // range: true,
-    //     step: 50,
-    //     min: 50,
-    //     max: 1000,
-    //     // values: [50, 100],
-    //     slide: function (event, ui) {
-    //         // $("#amount").val("¥" + ui.values[0] + " - ¥" + ui.values[1]);
-    //         $( "#amount" ).val( "$" + ui.value );
-    //     }
-    // });
-    // $("#amount").val("¥" + $("#slider-range").slider("values", 50) +
-    //     " - ¥" + $("#slider-range").slider("values", 100));
-
+    $( "#amount" ).val( "¥" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - ¥" + $( "#slider-range" ).slider( "values", 1 ) );
 
     /*--------------------------
-         banner colse Popup
+         banner close Popup
     ---------------------------*/
     $('.popup_off_banner').on('click', function () {
         $(".popup_banner").fadeOut(500);

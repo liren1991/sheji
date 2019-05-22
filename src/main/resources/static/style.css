@@ -4541,3 +4541,8 @@ a.shipping-calculator-button:hover {
   top: 6px;
   transition: all 0.3s ease-in 0s;
 }
+
+.my-primary-img{
+    height: 268px;
+    width: 268px;
+}

@@ -15,7 +15,7 @@ public class Product implements Serializable {
     private Date createTime;    
     private String url;  
     private String sourceUrl;  
-    private Integer pirce;  
+    private Integer price;
     private Double size;  
     private Integer type;  //  type 1 java项目 2 为PDF文件
     private Integer status;  //  0 已下架 1 上架
@@ -36,8 +36,8 @@ public class Product implements Serializable {
     public String getUrl() { return this.url; }
     public void setSourceUrl(String sourceUrl) { this.sourceUrl = sourceUrl; }
     public String getSourceUrl() { return this.sourceUrl; }
-    public void setPirce(Integer pirce) { this.pirce = pirce; }
-    public Integer getPirce() { return this.pirce; }
+    public void setPrice(Integer price) { this.price = price; }
+    public Integer getPrice() { return this.price; }
     public void setSize(Double size) { this.size = size; }
     public Double getSize() { return this.size; }
     public void setType(Integer type) { this.type = type; }
